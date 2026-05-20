@@ -4,7 +4,7 @@ The single source of truth for our product's look and feel. Designed in **Lunacy
 
 ## What's in here
 ```
-tokens/        Design tokens (colors, typography, spacing) in W3C JSON format
+tokens/        Primitives (colors, type, spacing, shadow, icon) + semantic-light/dark themes
 components/     Written specs for each component (anatomy, variants, states)
 CLAUDE.md       Rules that tell AI tools how to use this system
 ```

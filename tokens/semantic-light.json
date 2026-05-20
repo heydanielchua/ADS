@@ -1,0 +1,146 @@
+{
+  "$mode": "light",
+  "semantic": {
+    "brand": {
+      "primary": {
+        "$value": "{color.accent.60}",
+        "$type": "color",
+        "$description": "Brand ramp; hue-shifts to cyan in dark mode"
+      },
+      "hover": {
+        "$value": "{color.accent.70}",
+        "$type": "color"
+      },
+      "subtle": {
+        "$value": "{color.blue.10}",
+        "$type": "color"
+      },
+      "onBrand": {
+        "$value": "{color.grey.5}",
+        "$type": "color",
+        "$description": "Text/icon on a brand or filled surface"
+      }
+    },
+    "text": {
+      "default": {
+        "$value": "{color.grey.100}",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "{color.grey.50}",
+        "$type": "color"
+      },
+      "subtle": {
+        "$value": "{color.grey.65}",
+        "$type": "color",
+        "$description": "Labels, ghost/outline text, placeholders-on-hover"
+      },
+      "inverted": {
+        "$value": "{color.grey.5}",
+        "$type": "color"
+      },
+      "link": {
+        "$value": "{color.accent.60}",
+        "$type": "color"
+      }
+    },
+    "surface": {
+      "default": {
+        "$value": "{color.white}",
+        "$type": "color"
+      },
+      "subtle": {
+        "$value": "{color.grey.5}",
+        "$type": "color"
+      },
+      "hover": {
+        "$value": "{color.grey.15}",
+        "$type": "color"
+      },
+      "pressed": {
+        "$value": "{color.grey.20}",
+        "$type": "color"
+      },
+      "pressedStrong": {
+        "$value": "{color.grey.95}",
+        "$type": "color",
+        "$description": "Strong pressed fill (e.g. Primary button On Click)"
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.grey.20}",
+        "$type": "color"
+      },
+      "strong": {
+        "$value": "{color.grey.65}",
+        "$type": "color"
+      },
+      "focus": {
+        "$value": "{color.accent.60}",
+        "$type": "color"
+      }
+    },
+    "control": {
+      "secondary": {
+        "$value": "{color.grey.45}",
+        "$type": "color",
+        "$description": "Secondary button fill"
+      },
+      "toggleTrackOff": {
+        "$value": "{color.grey.50}",
+        "$type": "color"
+      },
+      "toggleKnobOff": {
+        "$value": "{color.grey.95}",
+        "$type": "color"
+      },
+      "toggleTrackOn": {
+        "$value": "{color.blue.100}",
+        "$type": "color",
+        "$description": "Toggle track when on"
+      }
+    },
+    "field": {
+      "bg": {
+        "$value": "{color.grey.5}",
+        "$type": "color"
+      },
+      "placeholder": {
+        "$value": "{color.grey.45}",
+        "$type": "color"
+      },
+      "border": {
+        "$value": "{color.grey.45}",
+        "$type": "color"
+      },
+      "borderHover": {
+        "$value": "{color.grey.65}",
+        "$type": "color"
+      },
+      "borderFilled": {
+        "$value": "{color.grey.35}",
+        "$type": "color",
+        "$description": "Text Area filled underline (see consistency note in text-area.md)"
+      }
+    },
+    "feedback": {
+      "error": {
+        "$value": "{color.red.60}",
+        "$type": "color"
+      },
+      "success": {
+        "$value": "{color.green.60}",
+        "$type": "color"
+      },
+      "warning": {
+        "$value": "{color.amber.60}",
+        "$type": "color"
+      },
+      "info": {
+        "$value": "{color.sky.60}",
+        "$type": "color"
+      }
+    }
+  }
+}
