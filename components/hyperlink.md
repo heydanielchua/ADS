@@ -1,20 +1,19 @@
 # Hyperlink
 
-Inline text link. Built on the body text style with color + underline conveying state.
+Inline text link. Color + underline convey state. References semantic tokens, so it adapts to dark mode (brand shifts blue->cyan).
 
 ## Base
-- Text style: `font-m-400` (Open Sans, `font.size.m` 16px / `font.lineHeight.m` 22px, `font.weight.regular`)
+- Text style: `font-m-400` (Open Sans 16/22).
 
 ## States
-| State    | Color                         | Underline | Opacity |
-|----------|-------------------------------|-----------|---------|
-| Default  | `semantic.brand.primary` (`#0066FF`) | yes  | 100%    |
-| Hover    | `semantic.brand.primary` (`#0066FF`) | no   | 100%    |
-| On Click | `color.grey.100` (`#121212`)         | yes  | 100%    |
-| Disabled | `semantic.brand.primary` (`#0066FF`) | yes  | 40%     |
+| State | Color | Underline | Opacity |
+|-------|-------|-----------|---------|
+| Default | `semantic.text.link` | yes | 100% |
+| Hover | `semantic.text.link` | no | 100% |
+| On Click | `semantic.text.default` | yes | 100% |
+| Disabled | `semantic.text.link` | yes | 40% |
 
 ## Rules
-- Default and disabled links are underlined; underline is removed on hover.
-- Pressed (On Click) shifts the text to near-black (`grey.100`) while keeping the underline.
-- Disabled is conveyed by 40% opacity, not a different color.
-- Always use the brand primary token for link color - never a raw hex.
+- Underlined by default; underline removed on hover.
+- Pressed shifts to `semantic.text.default` (near-black light / near-white dark).
+- Disabled = 40% opacity. Reference semantic tokens only.

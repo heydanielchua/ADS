@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System — Foundations, components, light & dark</title>
+<meta name="description" content="A token-driven design system. Primitives, semantic light/dark themes, and component specs — built for developers and AI.">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+<!-- RENAME: change "Design System" to your system's name throughout -->
+<header class="topbar">
+  <button class="menu-btn" aria-label="Menu">☰</button>
+  <a class="brand" href="index.html"><span class="mark"></span>Design System <span class="tag">v1.0</span></a>
+  <nav>
+    <a href="foundations.html">Foundations</a>
+    <a href="components.html">Components</a>
+    <a href="#ai">For AI</a>
+  </nav>
+  <div class="right">
+    <button class="theme-toggle"><span class="dot"></span><span class="lbl">Light</span></button>
+    <a class="gh" href="#">GitHub ↗</a>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="eyebrow">Token-driven · Light &amp; Dark</span>
+  <h1>One palette. Two themes. Every component in sync.</h1>
+  <p class="lead">A design system built from primitive tokens, a semantic light/dark layer derived by symmetry, and component specs that reference only semantic names — so the whole interface re-themes from a single switch.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="foundations.html">Explore foundations</a>
+    <a class="btn btn-ghost" href="components.html">Browse components</a>
+  </div>
+  <p style="margin-top:18px;font-size:13px;color:var(--text-muted)">Try the <strong style="color:var(--text-default)">Light / Dark</strong> toggle in the top-right — this entire site is themed by the system's own tokens.</p>
+</section>
+
+<div class="section-head"><h2>Built differently</h2></div>
+<div class="grid grid-3">
+  <div class="card">
+    <span class="kicker">AI-bootstrappable</span>
+    <h3>For developers &amp; AI</h3>
+    <p>A root <code>CLAUDE.md</code>, an <code>llms.txt</code> index, and per-component specs let an AI tool understand and build with the system end-to-end.</p>
+  </div>
+  <div class="card">
+    <span class="kicker">Symmetry</span>
+    <h3>Light &amp; dark by rule</h3>
+    <p>Dark mode is derived from light by mirroring across the palette axis — neutrals at 105−step, chromatic at 110−step. The brand even shifts blue→cyan.</p>
+  </div>
+  <div class="card">
+    <span class="kicker">Single source</span>
+    <h3>Tokens compile to CSS</h3>
+    <p>Primitives and semantic themes live as JSON, compile to <code>tokens.css</code> custom properties, and drive both the docs and your product.</p>
+  </div>
+</div>
+
+<div class="section-head"><h2>Reference</h2></div>
+<div class="grid grid-2">
+  <a class="card" href="foundations.html" style="text-decoration:none;color:inherit">
+    <h3>Foundations</h3>
+    <p>The 18-family color palette, the Open Sans type scale, spacing, radius, shadow, and icon sizes — rendered live from the tokens.</p>
+  </a>
+  <a class="card" href="components.html" style="text-decoration:none;color:inherit">
+    <h3>Components</h3>
+    <p>Buttons, pills, selection controls, text fields, and links — each documented with states and mapped to semantic tokens.</p>
+  </a>
+</div>
+
+<div class="section-head" id="ai"><h2>For AI</h2></div>
+<div class="grid grid-2">
+  <div class="card">
+    <h3>Use it with Claude</h3>
+    <p>Point Claude Code (or any LLM tool) at the repo. It reads <code>CLAUDE.md</code> for the rules, the token JSON for values, and the component specs for behaviour — then builds UI that matches.</p>
+  </div>
+  <div class="card">
+    <h3>Index files</h3>
+    <p style="margin-bottom:8px"><a href="../CLAUDE.md">CLAUDE.md</a> — the rulebook<br>
+    <a href="llms.txt">llms.txt</a> — machine index<br>
+    <a href="../tokens/THEMES.md">THEMES.md</a> — the symmetry rule</p>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="maxw">
+    <div>Design System · A token-driven, theme-aware system.</div>
+    <div class="mono">Built from its own tokens.</div>
+  </div>
+</footer>
+</body>
+</html>

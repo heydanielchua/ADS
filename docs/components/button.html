@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Button — Storybook · Design System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/site.js"></script>
+</head><body>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Menu">☰</button>
+  <a class="brand" href="../index.html"><span class="mark"></span>Design System <span class="tag">v1.0</span></a>
+  <nav><a href="../foundations.html">Foundations</a><a href="../components.html" class="active">Components</a></nav>
+  <div class="right"><button class="theme-toggle"><span class="dot"></span><span class="lbl">Light</span></button><a class="gh" href="#">GitHub ↗</a></div>
+</header>
+<div class="layout">
+  <aside class="sidebar"><h4>Components</h4><a href="button.html" class="active">Button</a><a href="pill.html" class="">Pill</a><a href="selection-controls.html" class="">Selection controls</a><a href="text-field.html" class="">Text field</a><a href="hyperlink.html" class="">Hyperlink</a></aside>
+  <main class="content">
+    <div class="breadcrumb"><a href="../components.html">← All components</a></div>
+    <div class="doc-title"><h1>Button</h1><span class="badge">stable</span></div>
+    <p class="doc-desc">Trigger an action. Seven variants, four states, four sizes — built from semantic tokens.</p>
+
+    <h2 class="doc-h">Preview</h2>
+    <div class="pv">
+      <div class="pv-tabs">
+        <button class="pv-tab active" data-mode="light">Light</button>
+        <button class="pv-tab" data-mode="dark">Dark</button>
+      </div>
+      <div class="pv-stage"><span class="lbl">Variants</span><span class="c-btn primary">Primary</span><span class="c-btn secondary">Secondary</span><span class="c-btn outlined">Outlined</span><span class="c-btn ghost">Ghost</span><span class="c-btn ghostblue">Ghost Blue</span><span class="c-btn danger">Danger</span><span class="c-btn dangeroutline">Danger Outline</span><span class="lbl">States — Primary</span><div class="item"><span class="c-btn primary">Default</span><span class="cap">default</span></div><div class="item"><span class="c-btn primary hover">Hover</span><span class="cap">hover</span></div><div class="item"><span class="c-btn primary pressed">On Click</span><span class="cap">on click</span></div><div class="item"><span class="c-btn primary disabled">Disabled</span><span class="cap">disabled</span></div><span class="lbl">Sizes</span><div class="item"><span class="c-btn primary s">Small</span><span class="cap">S · 32</span></div><div class="item"><span class="c-btn primary">Medium</span><span class="cap">M · 40</span></div><div class="item"><span class="c-btn primary icon">+</span><span class="cap">icon</span></div></div>
+    </div>
+
+    <h2 class="doc-h">Code</h2>
+    <div class="code">
+      <div class="code-head"><span class="ext">html</span><button class="copy-btn">Copy</button></div>
+      <pre><code>&lt;!-- semantic-token classes; re-theme automatically --&gt;
+&lt;button class="btn primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn outlined"&gt;Outlined&lt;/button&gt;
+&lt;button class="btn ghost"&gt;Ghost&lt;/button&gt;
+&lt;button class="btn danger"&gt;Danger&lt;/button&gt;</code></pre>
+    </div>
+
+    <h2 class="doc-h">Variants</h2>
+    <table class="props"><thead><tr><th>Variant</th><th>Background</th><th>Text / border</th></tr></thead><tbody><tr><td>primary</td><td>accent.primary</td><td>accent.onAccent</td></tr><tr><td>secondary</td><td>control.secondary</td><td>accent.onAccent</td></tr><tr><td>outlined</td><td>transparent</td><td>border.strong / text.subtle</td></tr><tr><td>ghost</td><td>transparent</td><td>text.subtle</td></tr><tr><td>ghostBlue</td><td>transparent</td><td>text.link</td></tr><tr><td>danger</td><td>feedback.error</td><td>accent.onAccent</td></tr><tr><td>dangerOutline</td><td>transparent</td><td>feedback.error</td></tr></tbody></table>
+
+    <h2 class="doc-h">Tokens</h2>
+    <table class="props"><thead><tr><th>Role</th><th>Token</th></tr></thead><tbody><tr><td>Fill</td><td><span class="sw" style="background:var(--accent-primary)"></span><span class="tok">accent.primary</span></td></tr><tr><td>Hover</td><td><span class="sw" style="background:var(--accent-hover)"></span><span class="tok">accent.hover</span></td></tr><tr><td>Pressed</td><td><span class="sw" style="background:var(--surface-pressedStrong)"></span><span class="tok">surface.pressedStrong</span></td></tr><tr><td>Text on fill</td><td><span class="sw" style="background:var(--accent-onAccent)"></span><span class="tok">accent.onAccent</span></td></tr></tbody></table>
+
+    <h2 class="doc-h">Source</h2>
+    <p class="doc-desc" style="font-size:14px">Full spec: <a href="../../components/button.md">components/button.md</a>. Behaviour, every state, and all variants are documented there. The component is built entirely from semantic tokens, so it re-themes automatically.</p>
+  </main>
+</div>
+<footer class="site"><div class="maxw"><div>Design System · Button</div><div class="mono">Token-driven storybook.</div></div></footer>
+<script>
+// per-preview Light/Dark tabs set data-theme locally on the stage
+document.querySelectorAll('.pv').forEach(function(pv){
+  var stage=pv.querySelector('.pv-stage');
+  pv.querySelectorAll('.pv-tab').forEach(function(t){
+    t.addEventListener('click',function(){
+      pv.querySelectorAll('.pv-tab').forEach(function(x){x.classList.remove('active')});
+      t.classList.add('active');
+      if(t.dataset.mode==='dark') stage.setAttribute('data-theme','dark'); else stage.removeAttribute('data-theme');
+    });
+  });
+});
+// copy buttons
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    var code=b.closest('.code').querySelector('code').innerText;
+    navigator.clipboard.writeText(code).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1200);});
+  });
+});
+</script>
+</body></html>

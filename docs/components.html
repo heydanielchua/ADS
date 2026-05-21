@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Components — Design System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head><body>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Menu">☰</button>
+  <a class="brand" href="index.html"><span class="mark"></span>Design System <span class="tag">v1.0</span></a>
+  <nav><a href="foundations.html">Foundations</a><a href="components.html" class="active">Components</a></nav>
+  <div class="right"><button class="theme-toggle"><span class="dot"></span><span class="lbl">Light</span></button><a class="gh" href="#">GitHub ↗</a></div>
+</header>
+<main class="content full">
+  <span class="eyebrow">Components</span>
+  <h1>Components</h1>
+  <p class="lead">Each component has its own Storybook page with a live Light/Dark preview, copyable code, a variant/state table, and its token mappings. All built from semantic tokens.</p>
+  <div class="components-grid" style="margin-top:32px">
+    <a class="comp-card" href="components/button.html">
+      <div class="ex"><span class="c-btn primary">Primary</span><span class="c-btn outlined">Outlined</span></div>
+      <h3>Button</h3><p>Seven variants, four states, four sizes.</p>
+    </a>
+    <a class="comp-card" href="components/pill.html">
+      <div class="ex"><span class="c-pill">Filter &#9662;</span><span class="c-pill sel">Selected &#9662;</span></div>
+      <h3>Pill</h3><p>Fully-rounded selectable chip. Two sizes, six states.</p>
+    </a>
+    <a class="comp-card" href="components/selection-controls.html">
+      <div class="ex"><span class="c-cb">&#10003;</span><span class="c-tg on"><span class="k"></span></span></div>
+      <h3>Selection controls</h3><p>Checkbox, radio, and toggle.</p>
+    </a>
+    <a class="comp-card" href="components/text-field.html">
+      <div class="ex" style="width:100%"><div class="c-field" style="width:100%"><div class="box" style="height:34px">Value &#9662;</div></div></div>
+      <h3>Text field</h3><p>Filled underline input. Six states + variants.</p>
+    </a>
+    <a class="comp-card" href="components/hyperlink.html">
+      <div class="ex"><a class="c-link">Hyperlink</a></div>
+      <h3>Hyperlink</h3><p>Inline link. Four states.</p>
+    </a>
+  </div>
+</main>
+<footer class="site"><div class="maxw"><div>Design System &middot; Components</div><div class="mono">Token-driven storybook.</div></div></footer>
+</body></html>

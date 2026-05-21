@@ -25,9 +25,9 @@ Rule from the kit: system icons are designed in a **24x24px frame**. These align
 Toast icons are color-coded to the feedback tokens (inferred from their colors - confirm and adjust):
 | Toast    | Color token            |
 |----------|------------------------|
-| Error    | `semantic.feedback.error`   (red)   |
+| Error    | `semantic.feedback.error` (red) |
 | Warning  | `semantic.feedback.warning` (amber) |
-| Info     | `color.blue.80` / `color.sky` (blue) |
+| Info     | `semantic.feedback.info` (sky) |
 | Success  | `semantic.feedback.success` (green) |
 
 ## Storing the glyphs (asset workflow)
