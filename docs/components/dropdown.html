@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dropdown — Storybook · Design System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/site.js"></script>
+</head><body>
+<header class="topbar">
+  <button class="menu-btn" aria-label="Menu">☰</button>
+  <a class="brand" href="../index.html"><span class="mark"></span>Design System <span class="tag">v1.0</span></a>
+  <nav><a href="../foundations.html">Foundations</a><a href="../components.html" class="active">Components</a></nav>
+  <div class="right"><button class="theme-toggle"><span class="dot"></span><span class="lbl">Light</span></button><a class="gh" href="#">GitHub ↗</a></div>
+</header>
+<div class="layout">
+  <aside class="sidebar"><h4>Components</h4><a href="button.html" class="">Button</a><a href="pill.html" class="">Pill</a><a href="selection-controls.html" class="">Selection controls</a><a href="text-field.html" class="">Text field</a><a href="dropdown.html" class="active">Dropdown</a><a href="hyperlink.html" class="">Hyperlink</a></aside>
+  <main class="content">
+    <div class="breadcrumb"><a href="../components.html">← All components</a></div>
+    <div class="doc-title"><h1>Dropdown</h1><span class="badge">stable</span></div>
+    <p class="doc-desc">A select control: a text-field-style trigger that opens a menu. Three types (plain, checkbox, color), five states.</p>
+
+    <h2 class="doc-h">Preview</h2>
+    <div class="pv">
+      <div class="pv-tabs">
+        <button class="pv-tab active" data-mode="light">Light</button>
+        <button class="pv-tab" data-mode="dark">Dark</button>
+      </div>
+      <div class="pv-stage"><span class="lbl">Trigger states</span><div class="item"><div class="c-field"><div class="l">Input Label</div><div class="box" style="border-bottom-color:var(--field-border)"><span style="color:var(--field-placeholder)">Select...</span><span style="margin-left:auto;color:var(--text-subtle)">▾</span></div></div><span class="cap">default</span></div><div class="item"><div class="c-field"><div class="l">Input Label</div><div class="box" style="border-bottom-color:var(--field-borderHover)"><span style="color:var(--text-subtle)">Select...</span><span style="margin-left:auto;color:var(--text-subtle)">▾</span></div></div><span class="cap">hover</span></div><div class="item"><div class="c-field"><div class="l">Input Label</div><div class="box" style="border-bottom-color:var(--border-focus)"><span style="color:var(--text-default)">Selected value</span><span style="margin-left:auto;color:var(--text-subtle)">▾</span></div></div><span class="cap">on click / open</span></div><div class="item"><div style="opacity:.4"><div class="c-field"><div class="l">Input Label</div><div class="box" style="border-bottom-color:var(--field-border)"><span style="color:var(--field-placeholder)">Select...</span><span style="margin-left:auto;color:var(--text-subtle)">▾</span></div></div></div><span class="cap">disabled</span></div><span class="lbl">Menu options</span><div class="item"><div style="width:180px;border:1px solid var(--border-default);border-radius:8px;overflow:hidden"><div style="height:40px;display:flex;align-items:center;gap:8px;padding:0 16px;background:var(--surface-subtle);color:var(--text-default);font-size:15px">Option</div></div><span class="cap">default</span></div><div class="item"><div style="width:180px;border:1px solid var(--border-default);border-radius:8px;overflow:hidden"><div style="height:40px;display:flex;align-items:center;gap:8px;padding:0 16px;background:var(--surface-hover);color:var(--text-default);font-size:15px">Option</div></div><span class="cap">hover</span></div><div class="item"><div style="width:180px;border:1px solid var(--border-default);border-radius:8px;overflow:hidden"><div style="height:40px;display:flex;align-items:center;gap:8px;padding:0 16px;background:var(--surface-pressed);color:var(--text-default);font-size:15px">Option</div></div><span class="cap">on click</span></div><div class="item"><div style="width:180px;border:1px solid var(--border-default);border-radius:8px;overflow:hidden"><div style="height:40px;display:flex;align-items:center;gap:8px;padding:0 16px;background:var(--surface-subtle);color:var(--text-default);font-size:15px"><span class="c-cb">&#10003;</span>Option</div></div><span class="cap">selection (checkbox)</span></div><div class="item"><div style="width:180px;border:1px solid var(--border-default);border-radius:8px;overflow:hidden"><div style="height:40px;display:flex;align-items:center;gap:8px;padding:0 16px;background:var(--surface-subtle);color:var(--text-link);font-size:15px">Select all</div></div><span class="cap">ghost blue</span></div></div>
+    </div>
+
+    <h2 class="doc-h">Code</h2>
+    <div class="code">
+      <div class="code-head"><span class="ext">html</span><button class="copy-btn">Copy</button></div>
+      <pre><code>&lt;div class="dropdown"&gt;
+  &lt;button class="dropdown-trigger"&gt;Select... &lt;span&gt;&amp;#9662;&lt;/span&gt;&lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li class="option"&gt;Option&lt;/li&gt;
+    &lt;li class="option selected"&gt;Option&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <h2 class="doc-h">Parts & states</h2>
+    <table class="props"><thead><tr><th>Part / state</th><th>Token</th><th>Notes</th></tr></thead><tbody><tr><td>trigger default</td><td>field.border</td><td>underline</td></tr><tr><td>trigger hover</td><td>field.borderHover</td><td></td></tr><tr><td>trigger open / filled</td><td>border.focus</td><td>accent underline</td></tr><tr><td>option default</td><td>surface.subtle</td><td>text.default</td></tr><tr><td>option hover</td><td>surface.hover</td><td></td></tr><tr><td>option on click</td><td>surface.pressed</td><td></td></tr><tr><td>selection check</td><td>accent.primary</td><td>checkbox type</td></tr><tr><td>ghost blue option</td><td>text.link</td><td>inline action</td></tr></tbody></table>
+
+    <h2 class="doc-h">Tokens</h2>
+    <table class="props"><thead><tr><th>Role</th><th>Token</th></tr></thead><tbody><tr><td>Open / filled</td><td><span class="sw" style="background:var(--border-focus)"></span><span class="tok">border.focus</span></td></tr><tr><td>Option hover</td><td><span class="sw" style="background:var(--surface-hover)"></span><span class="tok">surface.hover</span></td></tr><tr><td>Selection</td><td><span class="sw" style="background:var(--accent-primary)"></span><span class="tok">accent.primary</span></td></tr></tbody></table>
+
+    <h2 class="doc-h">Source</h2>
+    <p class="doc-desc" style="font-size:14px">Full spec: <a href="../../components/dropdown.md">components/dropdown.md</a>. Behaviour, every state, and all variants are documented there. The component is built entirely from semantic tokens, so it re-themes automatically.</p>
+  </main>
+</div>
+<footer class="site"><div class="maxw"><div>Design System · Dropdown</div><div class="mono">Token-driven storybook.</div></div></footer>
+<script>
+// per-preview Light/Dark tabs set data-theme locally on the stage
+document.querySelectorAll('.pv').forEach(function(pv){
+  var stage=pv.querySelector('.pv-stage');
+  pv.querySelectorAll('.pv-tab').forEach(function(t){
+    t.addEventListener('click',function(){
+      pv.querySelectorAll('.pv-tab').forEach(function(x){x.classList.remove('active')});
+      t.classList.add('active');
+      if(t.dataset.mode==='dark') stage.setAttribute('data-theme','dark'); else stage.removeAttribute('data-theme');
+    });
+  });
+});
+// copy buttons
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    var code=b.closest('.code').querySelector('code').innerText;
+    navigator.clipboard.writeText(code).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1200);});
+  });
+});
+</script>
+</body></html>

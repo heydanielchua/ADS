@@ -250,6 +250,8 @@
   --surface-hover: var(--color-grey-15);
   --surface-pressed: var(--color-grey-20);
   --surface-pressedStrong: var(--color-grey-95);
+  --surface-contrast: var(--color-grey-100);
+  --surface-panel: var(--color-accent-30);
   --border-default: var(--color-grey-20);
   --border-strong: var(--color-grey-65);
   --border-focus: var(--color-accent-60);
@@ -257,6 +259,7 @@
   --control-toggleTrackOff: var(--color-grey-50);
   --control-toggleKnobOff: var(--color-grey-95);
   --control-toggleTrackOn: var(--color-blue-100);
+  --control-segmentedTrack: var(--color-grey-25);
   --field-bg: var(--color-grey-5);
   --field-placeholder: var(--color-grey-45);
   --field-border: var(--color-grey-45);
@@ -284,6 +287,8 @@
   --surface-hover: var(--color-grey-90);
   --surface-pressed: var(--color-grey-85);
   --surface-pressedStrong: var(--color-grey-10);
+  --surface-contrast: var(--color-grey-5);
+  --surface-panel: var(--color-accent-80);
   --border-default: var(--color-grey-85);
   --border-strong: var(--color-grey-40);
   --border-focus: var(--color-accent-50);
@@ -291,6 +296,7 @@
   --control-toggleTrackOff: var(--color-grey-55);
   --control-toggleKnobOff: var(--color-grey-10);
   --control-toggleTrackOn: var(--color-blue-10);
+  --control-segmentedTrack: var(--color-grey-80);
   --field-bg: var(--color-grey-100);
   --field-placeholder: var(--color-grey-60);
   --field-border: var(--color-grey-60);

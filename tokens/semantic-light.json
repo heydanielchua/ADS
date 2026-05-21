@@ -65,6 +65,16 @@
         "$value": "{color.grey.95}",
         "$type": "color",
         "$description": "Strong pressed fill (e.g. Primary button On Click)"
+      },
+      "contrast": {
+        "$value": "{color.grey.100}",
+        "$type": "color",
+        "$description": "Always-dark floating surface (tooltips/Module). Inverts in dark mode to grey.5 for continued contrast."
+      },
+      "panel": {
+        "$value": "{color.accent.30}",
+        "$type": "color",
+        "$description": "Lightly brand-tinted dialog and panel surface. Used in Advanced Filter and Hide Columns dialogs."
       }
     },
     "border": {
@@ -99,6 +109,11 @@
         "$value": "{color.blue.100}",
         "$type": "color",
         "$description": "Toggle track when on"
+      },
+      "segmentedTrack": {
+        "$value": "{color.grey.25}",
+        "$type": "color",
+        "$description": "Segmented control track/trough background."
       }
     },
     "field": {
