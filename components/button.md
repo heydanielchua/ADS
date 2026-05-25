@@ -1,45 +1,37 @@
-# Button
+# Button (UX 2.0 additions)
 
-Interactive element for triggering actions. A matrix of **size × variant × content × state** (209 combinations in Lunacy). All colors reference **semantic tokens**, so light/dark mode flow through automatically.
+> This extends the existing `button.md`. It adds the **Alert** variant and the **size scale** from the UX 2.0 master. Merge into the existing spec; do not duplicate variants already documented (Primary, Outlined, Icon, Ghost).
 
-## Shared
-- Radius `radius.8`; horizontal padding `spacing.16`; vertical padding 11px (tuned to height).
-- Text: `font-s-400` (Open Sans 14/20). Icon+text gap `spacing.8`.
+Buttons are the primary call-to-action on a page. The system is a matrix of **size × variant × content × state**.
 
-## Sizes
-| Size | Height | Notes |
-|------|--------|-------|
-| S | 32px | text / icon+text |
-| M | 40px | text / icon+text |
-| XXS | 16px | icon-only |
-| XS | 24px | icon-only |
+## Variants
+Primary · Outlined · Icon · Ghost · **Icon + Text** · **Loading** · **Alert**.
 
-## Variants (default state)
-| Variant | Background | Border | Text/icon |
-|---------|------------|--------|-----------|
-| Primary | `semantic.accent.primary` | none | `semantic.accent.onAccent` |
-| Secondary | `semantic.control.secondary` | none | `semantic.accent.onAccent` |
-| Outlined | transparent | 1px `semantic.border.strong` | `semantic.text.subtle` |
-| Ghost | transparent | none | `semantic.text.subtle` |
-| Ghost Blue | transparent | none | `semantic.text.link` |
-| Danger | `semantic.feedback.error` | none | `semantic.accent.onAccent` |
-| Danger - Outline | transparent | 1px `semantic.feedback.error` | `semantic.feedback.error` |
-| FAB | `semantic.accent.primary` | none | `semantic.accent.onAccent` |
+- **Icon + Text** — secondary CTA for stand-alone actions ("New", "Edit") not in an action bar; usually styled as outlined. More than one allowed per page.
+- **Loading** — feedback after a press, to show the action's result is in progress.
+- **Alert** — for warnings or high-criticality actions. Three styles (contained / outlined / ghost). Colours follow system feedback tokens:
+  - **Critical** → `feedback.error` (red)
+  - **Warning** → `feedback.warning` (amber)
 
-## Content types
-Text only, Icon + Text (icon leads, gap `spacing.8`), Icon only (square; icon-only sizes).
+## Size scale
 
-## States (Primary)
-| State | Background | Text |
-|-------|------------|------|
-| Default | `semantic.accent.primary` | `semantic.accent.onAccent` |
-| Hover | `semantic.accent.hover` | `semantic.accent.onAccent` |
-| On Click | `semantic.surface.pressedStrong` | `semantic.accent.onAccent` |
-| Disabled | `semantic.accent.primary`, 40% opacity | - |
+| Size | Width | Height | V-pad | H-pad | Radius |
+|------|-------|--------|-------|-------|--------|
+| Default | 100px [variable] | 40px | 10px | min 12px | `radius.8` |
+| Small | min 80px [variable] | 32px | 6px | min 12px | `radius.8` |
+| Icon (default) | 40px | 40px | — | — | `radius.8` |
+| Icon (small) | 32px | 32px | — | — | `radius.8` |
+| Icon (raw) | 24px | 24px | — | — | — |
 
-Other variants follow the same logic: hover shifts to a stronger shade of the variant's role; outlined/ghost gain a `semantic.surface.hover` background on hover.
+Icon + Text: icon sits in a 20×20px container with 4px gap to the label.
+
+## States
+Default · Hover · On-click · Active · Disabled · Loading — colour changes, geometry does not. (See existing `button.md` for the per-variant state token table.)
+
+## Emphasis / hierarchy
+When a layout needs multiple actions, establish clear hierarchy and group related actions. You do not have to use an outlined button as the secondary action — icons and ghost buttons are often better for data tables and dashboards.
 
 ## Rules
-- One Primary (or Danger) per view where possible.
-- Disabled = 40% opacity (system-wide).
-- Reference semantic tokens only - never raw hex.
+- One contained Primary (or one Alert) per container where possible.
+- Alert colours must match the system's feedback tokens — never a one-off hex.
+- Disabled = 40% opacity. Semantic tokens only.

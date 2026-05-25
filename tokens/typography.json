@@ -1,349 +1,65 @@
 {
+  "$description": "C3 / ORMR UX 2.0 type scale. Family is Open Sans. Composite tokens (size / lineHeight / weight) sized in px with rem reference. Use these names in component specs.",
   "font": {
     "family": {
-      "sans": {
-        "$value": "Open Sans, system-ui, sans-serif",
-        "$type": "fontFamily"
-      },
-      "mono": {
-        "$value": "Courier New, monospace",
-        "$type": "fontFamily"
-      }
-    },
-    "weight": {
-      "regular": {
-        "$value": 400,
-        "$type": "fontWeight"
-      },
-      "semibold": {
-        "$value": 600,
-        "$type": "fontWeight"
-      },
-      "bold": {
-        "$value": 800,
-        "$type": "fontWeight"
-      }
-    },
-    "size": {
-      "2xs": {
-        "$value": "8px",
-        "$type": "dimension"
-      },
-      "xs": {
-        "$value": "12px",
-        "$type": "dimension"
-      },
-      "s": {
-        "$value": "14px",
-        "$type": "dimension"
-      },
-      "m": {
-        "$value": "16px",
-        "$type": "dimension"
-      },
-      "l": {
-        "$value": "22px",
-        "$type": "dimension"
-      },
-      "xl": {
-        "$value": "28px",
-        "$type": "dimension"
-      },
-      "2xl": {
-        "$value": "32px",
-        "$type": "dimension"
-      },
-      "3xl": {
-        "$value": "42px",
-        "$type": "dimension"
-      },
-      "4xl": {
-        "$value": "54px",
-        "$type": "dimension"
-      }
-    },
-    "lineHeight": {
-      "2xs": {
-        "$value": "12px",
-        "$type": "dimension"
-      },
-      "xs": {
-        "$value": "17px",
-        "$type": "dimension"
-      },
-      "s": {
-        "$value": "20px",
-        "$type": "dimension"
-      },
-      "m": {
-        "$value": "22px",
-        "$type": "dimension"
-      },
-      "l": {
-        "$value": "32px",
-        "$type": "dimension"
-      },
-      "xl": {
-        "$value": "40px",
-        "$type": "dimension"
-      },
-      "2xl": {
-        "$value": "45px",
-        "$type": "dimension"
-      },
-      "3xl": {
-        "$value": "60px",
-        "$type": "dimension"
-      },
-      "4xl": {
-        "$value": "77px",
-        "$type": "dimension"
-      }
+      "sans": { "$value": "Open Sans", "$type": "fontFamily" }
     }
   },
-  "textStyle": {
-    "font-2xs-400": {
+  "type": {
+    "heading-01": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.2xs}",
-        "lineHeight": "{font.lineHeight.2xs}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "54px", "lineHeight": "64px", "fontWeight": 300 },
+      "$description": "Light. Data visualisation / large numerics. Use sparingly when figures must stand out."
     },
-    "font-2xs-600": {
+    "heading-02": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.2xs}",
-        "lineHeight": "{font.lineHeight.2xs}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "42px", "lineHeight": "50px", "fontWeight": 300 },
+      "$description": "Light. Full-screen moments; greetings or onboarding at start screen."
     },
-    "font-2xs-800": {
+    "heading-03": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.2xs}",
-        "lineHeight": "{font.lineHeight.2xs}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "32px", "lineHeight": "40px", "fontWeight": 400 },
+      "$description": "Regular."
     },
-    "font-xs-400": {
+    "heading-04": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.xs}",
-        "lineHeight": "{font.lineHeight.xs}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "28px", "lineHeight": "36px", "fontWeight": 400 },
+      "$description": "Regular."
     },
-    "font-xs-600": {
+    "heading-05": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.xs}",
-        "lineHeight": "{font.lineHeight.xs}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "22px", "lineHeight": "30px", "fontWeight": 700 },
+      "$description": "Bold. Pane headers."
     },
-    "font-xs-800": {
+    "heading-06": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.xs}",
-        "lineHeight": "{font.lineHeight.xs}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "18px", "lineHeight": "22px", "fontWeight": 700 },
+      "$description": "Bold. Component headings or content requiring emphasis."
     },
-    "font-s-400": {
+    "body-short-01": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.s}",
-        "lineHeight": "{font.lineHeight.s}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "16px", "lineHeight": "22px", "fontWeight": 400 },
+      "$description": "Default body. Short paragraphs, no more than 4 lines."
     },
-    "font-s-600": {
+    "body-long-01": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.s}",
-        "lineHeight": "{font.lineHeight.s}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "16px", "lineHeight": "24px", "fontWeight": 400 },
+      "$description": "Long paragraphs (>4 lines). Always left-align."
     },
-    "font-s-800": {
+    "body-short-02": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.s}",
-        "lineHeight": "{font.lineHeight.s}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "14px", "lineHeight": "18px", "fontWeight": 400 },
+      "$description": "Secondary body; descriptions. Short paragraphs, no more than 4 lines."
     },
-    "font-m-400": {
+    "body-long-02": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.m}",
-        "lineHeight": "{font.lineHeight.m}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "14px", "lineHeight": "20px", "fontWeight": 400 },
+      "$description": "Long body copy in components (Accordion, Structured List). Always left-align."
     },
-    "font-m-600": {
+    "caption-01": {
       "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.m}",
-        "lineHeight": "{font.lineHeight.m}"
-      }
-    },
-    "font-m-800": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.m}",
-        "lineHeight": "{font.lineHeight.m}"
-      }
-    },
-    "font-l-400": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.l}",
-        "lineHeight": "{font.lineHeight.l}"
-      }
-    },
-    "font-l-600": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.l}",
-        "lineHeight": "{font.lineHeight.l}"
-      }
-    },
-    "font-l-800": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.l}",
-        "lineHeight": "{font.lineHeight.l}"
-      }
-    },
-    "font-xl-400": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.xl}",
-        "lineHeight": "{font.lineHeight.xl}"
-      }
-    },
-    "font-xl-600": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.xl}",
-        "lineHeight": "{font.lineHeight.xl}"
-      }
-    },
-    "font-xl-800": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.xl}",
-        "lineHeight": "{font.lineHeight.xl}"
-      }
-    },
-    "font-2xl-400": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.2xl}",
-        "lineHeight": "{font.lineHeight.2xl}"
-      }
-    },
-    "font-2xl-600": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.2xl}",
-        "lineHeight": "{font.lineHeight.2xl}"
-      }
-    },
-    "font-2xl-800": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.2xl}",
-        "lineHeight": "{font.lineHeight.2xl}"
-      }
-    },
-    "font-3xl-400": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.3xl}",
-        "lineHeight": "{font.lineHeight.3xl}"
-      }
-    },
-    "font-3xl-600": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.3xl}",
-        "lineHeight": "{font.lineHeight.3xl}"
-      }
-    },
-    "font-3xl-800": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.3xl}",
-        "lineHeight": "{font.lineHeight.3xl}"
-      }
-    },
-    "font-4xl-400": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.regular}",
-        "fontSize": "{font.size.4xl}",
-        "lineHeight": "{font.lineHeight.4xl}"
-      }
-    },
-    "font-4xl-600": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.semibold}",
-        "fontSize": "{font.size.4xl}",
-        "lineHeight": "{font.lineHeight.4xl}"
-      }
-    },
-    "font-4xl-800": {
-      "$type": "typography",
-      "$value": {
-        "fontFamily": "{font.family.sans}",
-        "fontWeight": "{font.weight.bold}",
-        "fontSize": "{font.size.4xl}",
-        "lineHeight": "{font.lineHeight.4xl}"
-      }
+      "$value": { "fontFamily": "{font.family.sans}", "fontSize": "12px", "lineHeight": "16px", "fontWeight": 400 },
+      "$description": "Field labels, error messages, helper text below a field. Not for body text. Bold (700) variant available for emphasis."
     }
   }
 }
